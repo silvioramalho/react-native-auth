@@ -4,8 +4,8 @@ import * as auth from '../services/auth';
 import api from '../services/api';
 
 interface User {
-    name: string;
-    email: string;
+  name: string;
+  email: string;
 }
 
 interface AuthContextData {
@@ -34,8 +34,8 @@ export const AuthProvider: React.FC = ({children}) => {
       if (storageUser && storageToken) {
         api.defaults.headers['Authorization'] = `Bearer ${storageToken}`;
         setUser(JSON.parse(storageUser));
-        setLoading(false);
       }
+      setLoading(false);
     }
 
     loadStorageData();
