@@ -1,12 +1,6 @@
-interface Response {
-    token: string;
-    user: {
-        name: string;
-        email: string;
-    }
-}
+import IPayload from '../interfaces/payload.interface';
 
-export function signIn(): Promise<Response> {
+export function signIn(): Promise<IPayload> {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({

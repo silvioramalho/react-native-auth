@@ -3,7 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 
 import Routes from './routes/index';
-import {AuthProvider} from './contexts/auth';
+import {AuthProvider} from './providers/auth.provider';
 
 // FC = Function Component
 const App: React.FC = () => {
